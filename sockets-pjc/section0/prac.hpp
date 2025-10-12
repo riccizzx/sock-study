@@ -33,6 +33,7 @@ namespace s {
 
 		void handlemsg();
 
+		int run();
 	private:
 
 		WSADATA ws; // wsadata object

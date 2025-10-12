@@ -17,7 +17,7 @@ void s::so::setup() {
 // AF_INET, SOCK_STREAM, IPROTO_TCP, exemple of a socket config
 
 void s::so::soc(int family, int type, int protocol) {
-
+	/*
 	int choice;
 	std::cin >> choice;
 	
@@ -57,7 +57,7 @@ void s::so::soc(int family, int type, int protocol) {
 	default:
 		break;
 	}
-
+	*/
 	server_sock = socket(family, type, protocol); // create the socket
 
 	memset(&server_addr, 0,sizeof(server_addr)); // clear the struct
@@ -101,9 +101,6 @@ void s::so::connec(SOCKET s, sockaddr_in addres, int addres_size)
 		printf("Invalid socket!");
 	}
 	else {
-
-		
-		
 		printf("Connected!");
 	}
 	
@@ -131,4 +128,16 @@ void s::so::handlemsg() {
 
 
 	
+}
+
+int s::so::run() {
+	s::so server;
+
+
+	server.setup();
+	server.soc(AF_INET, SOCK_STREAM, 0);
+	server.binder(server_addr, sizeof(server_addr));
+
+		
+	return 0;
 }
