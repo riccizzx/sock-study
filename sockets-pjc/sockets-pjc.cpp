@@ -20,7 +20,7 @@ int main()
 {
     s::so s;
     int choice;
-    
+ 
     if (painel) {
         painel();
     }
@@ -34,7 +34,7 @@ int main()
     {
 
     case 0:
-        s.run(); break;
+        s.main();
     
     case 1:
         break;

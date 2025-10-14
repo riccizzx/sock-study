@@ -1,9 +1,8 @@
-﻿// sockets-pjc.h : Include file for standard system include files,
-// or project specific include files.
+﻿
+#ifndef SOCKET_GLOBAL_H
+#define SOCKET_GLOBAL_H
 
-#pragma once
-
-#include <iostream>
 #include "section0\prac.hpp"
 
-// TODO: Reference additional headers your program requires here.
+
+#endif
