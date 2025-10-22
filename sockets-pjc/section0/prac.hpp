@@ -17,6 +17,17 @@
 
 #pragma comment(lib, "ws2_32.lib")
 
+#define MAX_BUFFER_SIZE 1024
+
+typedef struct
+cli
+{
+	sockaddr_in client;
+	WSADATA ws;
+	SOCKET client_sock;
+	const char buffer[MAX_BUFFER_SIZE];
+};
+
 #define handle_error(msg) \
         do { perror(msg); exit(EXIT_FAILURE); } while(0)
 
@@ -26,8 +37,20 @@ namespace s {
 
 	public:
 
-		int main();
+		int initalize();
+		int run();
 
+	};
+
+	class cl {
+
+	public:
+
+		int client();
+
+	private:
+
+		cli c;
 	};
 }
 

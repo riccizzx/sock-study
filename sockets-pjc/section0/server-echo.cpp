@@ -1,7 +1,7 @@
 // SIMPLE_SERVER_APPLICATION
 #include "prac.hpp"
 
-int s::so::main() {
+int s::so::run() {
 
     WSADATA ws;
     SOCKET server_sock, client_sock;
@@ -47,7 +47,7 @@ int s::so::main() {
     std::cout << "Server listening on port " << PORT << "...\n";
 
     // accept connections
-    while (true) {
+    while (1) {
         client_sock = accept(server_sock, (sockaddr*)&client_addr, &client_len);
         if (client_sock == INVALID_SOCKET) {
             std::cerr << "Accept failed: " << WSAGetLastError() << "\n";

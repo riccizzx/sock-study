@@ -34,7 +34,7 @@ int main()
     {
 
     case 0:
-        s.main();
+        s.run();
     
     case 1:
         break;
