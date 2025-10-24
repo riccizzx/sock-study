@@ -12,6 +12,8 @@
 #include <WinSock2.h>
 #include <WS2tcpip.h>
 #include <string>
+#include <cstring>
+#include <string.h>
 
 // simple explanation of sockets functionality in c++
 
@@ -25,7 +27,7 @@ cli
 	sockaddr_in client;
 	WSADATA ws;
 	SOCKET client_sock;
-	const char buffer[MAX_BUFFER_SIZE];
+	char buffer[MAX_BUFFER_SIZE];
 };
 
 #define handle_error(msg) \

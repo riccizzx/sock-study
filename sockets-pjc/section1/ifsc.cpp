@@ -13,7 +13,6 @@ int var::struc::run(){
 		std::cerr << "error!" ;
 	}
 
-
 	char host[NI_MAXHOST];
 	char service[NI_MAXSERV];
 	
@@ -21,6 +20,6 @@ int var::struc::run(){
 	server.sin6_port = htons(port);
 	inet_pton(AF_INET, "0.0.0.0", &server.sin6_addr);
 
-	
+	return 0;
 	
 }
